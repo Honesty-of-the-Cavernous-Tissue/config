@@ -1,0 +1,24 @@
+alias ..='cd ..' 
+alias ...='cd ../...'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+
+alias scp='scp -r -P'
+alias ini='sh ~/init.sh'
+alias dps='docker ps -a'
+alias python='python3 -B'
+alias pip='python3 -m pip'
+
+# on mac
+alias ip='curl cip.cc' # ifconfig.me
+alias dns='grep "nameserver" /etc/resolv.conf'
+alias vpnon="export http_proxy=http://127.0.0.1:29879; export https_proxy=http://127.0.0.1:29879; export ALL_PROXY=socks5://127.0.0.1:29878; echo '  \033[7;32;40m VPN is on \033[0m  '"
+alias vpnoff="unset ALL_PROXY; unset http_proxy; unset https_proxy; echo '  \033[7;32;40m VPN is off \033[0m'"
+
+# On Server
+alias nv='nvidia-smi'
+alias gpu='nvidia-smi -L'
+alias wi='watch -td -n 0.1 iostat -m'
+alias wn='watch -td -n 0.1 nvidia-smi'
+alias cudnn='cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2'
+alias me="host myip.opendns.com resolver1.opendns.com | awk '/has / {print $4}'"
